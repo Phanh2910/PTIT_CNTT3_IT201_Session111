@@ -55,7 +55,7 @@ int main(){
 
     Node* head=node1;
     printList(head);
-    //giải phóng ộ nhớ
+    //giải phóng bộ nhớ
     freeList(head);
     return 0;
 }
