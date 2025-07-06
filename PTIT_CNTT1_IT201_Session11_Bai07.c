@@ -8,9 +8,9 @@ typedef struct Node{
 }Node;
 Node*createNode(int value){
     Node*newNode=(Node*)malloc(sizeof(Node));
-    newNode->data=value;//gán giá trị cho node
-    newNode->next=NULL;//gán giá trị cho con trỏ next
-    newNode->prev=NULL;//in giá trị cho con trỏ prev
+    newNode->data=value;
+    newNode->next=NULL;
+    newNode->prev=NULL;
     return newNode;
 }
 //hàm in danh sách liên kết đôi
@@ -25,12 +25,11 @@ void printList(Node* head){
     }
 
 }
-//hàm giải phóng bộ nhớ
 void freeList(Node* head){
     Node* temp=head;
     while(head!=NULL){
         temp=head;
-        head=head->next;//tr ến con trỏ tiếp theo
+        head=head->next;
         free(temp);//giải phóng các node
     }
 
